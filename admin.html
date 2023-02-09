@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script/admin.js" defer></script>
+    <title>Document</title>
+</head>
+<!-- Adding books -->
+<style>
+    .header {
+        text-align: center;
+
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 60%;
+        margin: auto;
+    }
+
+    th,
+    td {
+        width: "100px";
+        border: 1px solid red;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        display: flex;
+        width: 60%;
+        margin: auto;
+        height: 350px;
+    }
+
+    .section2 {
+        padding: 10px;
+
+
+
+    }
+</style>
+
+
+<body>
+    <div class="header">
+        <h1>Library App</h1>
+    </div>
+    <div class="nav">
+        <button id="adminBtn">Admin Section</button>
+        <button id="adminBtn">User Section</button>
+    </div>
+    <div id="adminSection">
+        <h2>Admin Section</h2>
+        <form>
+            <label for="bookcover">Book Cover Image</label>
+            <input type="text" placeholder="Image" name="bookcover" id="bookcover">
+            <br /><br />
+            <label for="bookname">Name of the Book</label>
+            <input type="text" placeholder="Name of the book" name="bookname" id="bookname">
+            <br /><br />
+            <label for="author">Name of the Book Author</label>
+            <input type="text" placeholder="Author" name="author" id="author">
+            <br /><br />
+
+            <label for="publisher">Name of the publisher</label>
+            <textarea name="publisher" id="publisher"></textarea>
+
+            <label for="bookname">Cost</label>
+            <textarea name="cost" id="cost"></textarea>
+            <br /><br />
+            <label for="genre">Genre</label>
+            <select id="genre">
+                <option value="">Select Genre</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="business">Business</option>
+                <option value="fiction">Fiction</option>
+                <option value="tech">Tech</option>
+            </select>
+            <br /><br />
+
+
+            <label for="edition">Edition</label>
+            <select id="edition">
+                <option value="">Select Edition</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+            <br /><br />
+            <button id="addBookBtn">Add Book</button>
+            <button id="updateBookBtn">Update Book</button>
+            <button id="deleteBookBtn">Delete Book</button>
+        </form>
+        <br />
+        <table id="bookTable">
+           <thead>
+            <tr>
+                <th>
+                    Book Cover Image
+                </th>
+                <th>
+                    Author
+                </th>
+                <th>
+                    Genre
+                </th>
+                <th>
+                    Edition
+            
+                </th>
+                <th>
+                    Publisher
+                </th>
+                <th>
+                    Cost
+                </th>
+                <th>
+                    Edit
+                </th>
+            
+                <th>
+                    Delete
+                </th>
+            </tr>
+           </thead>
+           <tbody></tbody>
+        </table>
+    </div>
+    <div class="container">
+
+    </div>
+
+</body>
+
+</html>
